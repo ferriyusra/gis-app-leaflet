@@ -1,0 +1,31 @@
+<!-- produk -->
+	<section class="project-area">
+		<div class="container">
+			<div class="pb-5">
+				<h3 class="text-uppercase">
+					Produk yang dijual
+				</h3>
+			</div>
+
+			<div class="row grid">
+				<?php foreach ($produk as $k) : ?>
+					<div class="col-lg-4 col-md-6 col-sm-12 element-item latest">
+						<div class="our-project">
+							<div class="img">
+								<a class="test-popup-link" href="<?= base_url('assets/img-konten/') . $k['gambar_konten']; ?>">
+									<img src="<?= base_url('assets/img-konten/') . $k['gambar_konten']; ?> " class="img-fluid" />
+								</a>
+							</div>
+							<div class="title py-4 text-center">
+								<h4 class="text-uppercase"><?= $k['nama_produk']; ?></h4>
+								<span class="text-dark"><?= $k['harga']; ?></span>
+								<h5 class="text-secondary mt-2">
+									<?= $k['deskripsi']; ?>
+								</h5>
+							</div>
+						</div>
+					</div>
+				<?php endforeach; ?>
+			</div>
+		</div>
+	</section>
